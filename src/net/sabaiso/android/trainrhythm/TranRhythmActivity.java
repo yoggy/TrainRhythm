@@ -26,7 +26,7 @@ public class TranRhythmActivity extends Activity implements Runnable {
 
 		vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 
-        view = new PhotoView(this, R.drawable.strap);
+        view = new PhotoView(this);
 		setContentView(view);
 	}
 
@@ -35,11 +35,13 @@ public class TranRhythmActivity extends Activity implements Runnable {
         super.onResume();
         hideSystemUI();
         startIntervalTimer();
+        view.onResume();
     }
 
 	protected void onPause() {
         stopIntervalTimer();
         vibrator.cancel();
+        view.onPause();
         super.onPause();
 	}
 
