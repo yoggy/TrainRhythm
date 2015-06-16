@@ -41,8 +41,10 @@ public class PhotoView extends View {
 		super(context);
 
 		Resources r = context.getResources();
-		imgs.add(BitmapFactory.decodeResource(r, R.drawable.strap01));
-		imgs.add(BitmapFactory.decodeResource(r, R.drawable.strap02));
+		imgs.add(BitmapFactory.decodeResource(r, R.drawable.photo01));
+		imgs.add(BitmapFactory.decodeResource(r, R.drawable.photo02));
+		imgs.add(BitmapFactory.decodeResource(r, R.drawable.photo03));
+		imgs.add(BitmapFactory.decodeResource(r, R.drawable.photo04));
 
 		p_solid_black = new Paint();
 		p_solid_black.setColor(Color.BLACK);
